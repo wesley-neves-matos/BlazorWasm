@@ -1,0 +1,9 @@
+﻿services:
+  blazorwasm:
+    image: ${DOCKER_REGISTRY-}blazorwasm
+    container_name: blazorwasm
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8200:8080
